@@ -19,4 +19,3 @@ class AlbumController extends Controller
         return response()->json($response->json());
     }
 }
-
