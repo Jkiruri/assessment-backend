@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Http;
 
 class PhotoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum');
+    }
     public function index()
     {
         $response = Http::get('https://jsonplaceholder.typicode.com/photos');
